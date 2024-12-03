@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url(../image2/bek.png);
+        }
+
+        .SlideSatu {
+            margin-top: 30px;
+        }
+
+        .SlideSatu img {
+            width: 140%;
+            margin-top: 70px;
+        }
+
+        .SlideDua .hero img {
+            opacity: 20%;
+            width: 100%;
+            margin: auto;
+        }
+
+        .SlideDua p {
+            margin-top: -350px;
+            text-align: center;
+            font-size: small;
+
+        }
+
+        .content2 {
+            margin-top: -70px;
+            display: none;
+        }
+
+        /* Mengubah warna tombol navigasi carousel menjadi hitam */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: black;
+        }
+
+        /* Memberikan warna hitam pada tombol indikator */
+        .carousel-indicators button {
+            background-color: black;
+        }
+
+        /* Warna hitam saat tombol indikator aktif */
+        .carousel-indicators .active {
+            background-color: black;
+        }
+
+        .card {
+            overflow: hidden;
+            /* Mencegah gambar keluar dari card */
+        }
+
+        .uniform-image {
+            width: 100%;
+            /* Sesuaikan dengan lebar card */
+            height: 250px;
+            /* Tinggi tetap untuk semua gambar */
+            object-fit: cover;
+            /* Gambar memenuhi area dengan proporsi yang sesuai */
+        }
+
+        .content3 {
+            margin-top: 50px;
+            display: none;
+        }
+
+        .content3 .col-7 p {
+            margin-top: 50px;
+            margin-left: 25px;
+            text-align: left;
+        }
+
+        /* Gaya tombol */
+        #showCarouselBtn {
+            font-weight: bold;
+            width: 25%;
+            margin: auto;
+            position: relative;
+            top: -90px;
+            border: none;
+            padding: 10px 20px;
+            font-size: 17px;
+            display: block;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        /* Animasi pulsating */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.3);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Terapkan animasi pada tombol */
+        #showCarouselBtn .icon {
+            display: inline-block;
+            animation: pulse 1s infinite;
+        }
+
+        #showCarouselBtn1 {
+            font-weight: bold;
+            width: 20%;
+            margin: auto;
+            position: relative;
+            top: -2px;
+            border: none;
+            padding: 10px 20px;
+            font-size: 10px;
+            display: block;
+            text-align: center;
+            cursor: pointer;
+            color: aliceblue;
+            font-weight: bold;
+            border-radius: 5px;
+            background-color: rgb(64, 0, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="SlideSatu">
+            <div class="card">
+                <div class="row">
+                    <div class="col-5">
+                        <img src="../image2/image (10).png" alt="">
+                    </div>
+                    <div class="col-7" style=" font-size: small; margin-top: 70px;">
+                        <h3>Hai... <br></h3>
+                        <p>Teruntuk kamu yang lihat tulisan ini.😊😊😊</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="SlideDua">
+            <div class="card">
+                <div class="hero">
+                    <img src="../image2/poto1.png" alt="">
+                </div>
+                <div class="content">
+                    <p>Cuman mau bilang tepat hari ini tanggal 4 desember 2024 kamu menginjak usia 23 tahun lohh..🤭🤭
+                        🎊🎊
+                        <br><b>Ye selamat ya....</b><br>Di usiamu yang sekarang ini, aku berharap semoga setiap langkah
+                        yang kamu ambil selalu diberkahi keberuntungan dan kemudahan. Aku tahu perjalananmu tidak selalu
+                        mudah ada masanya kamu luka, ada lelah, ada hari-hari di mana kamu merasa semuanya terlalu berat
+                        untuk ditanggung sendirian.Aku kagum pada keteguhanmu. Meski sulit, kamu terus maju, membuktikan
+                        bahwa dirimu lebih kuat dari keraguan yang pernah ada. Ingatlah, di depan sana ada cahaya dan
+                        kebahagiaan yang menantimu. Jangan menyerah, karena kamu pantas untuk semua hal indah yang
+                        sedang menunggumu. 🌟<br>Eh ingat ga kita pernah bikin kenangan bersama loh coba deh liat ke
+                        bawah 😊😊 <br> Caranya tekan tanda hati yang ada di bawah <br>👇👇</p>
+                </div>
+                <button id="showCarouselBtn" class="btn">
+                    <span class="icon">💖💖💖</span>
+                </button>
+                <div class="content2">
+                    <!-- Carousel Element -->
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="card">
+                                            <img src="../image/gambar1.jpeg" class="uniform-image" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card">
+                                            <img src="../image/gambar2.jpeg" class="uniform-image" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="card">
+                                            <img src="../image/gambar (1).jpeg" class="uniform-image" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card">
+                                            <img src="../image/gambar (2).jpeg" class="uniform-image" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="card">
+                                            <img src="../image/gambar (3).jpeg" class="uniform-image" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card">
+                                            <img src="../image/image.png" class="uniform-image" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="card">
+                                            <img src="../image/gambar (5).jpeg" class="uniform-image" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card">
+                                            <img src="../image/gambar (6).jpeg" class="uniform-image" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <span style="color: red; font-size: x-small;">Warning ! ! ! Jangan dulu di tekan tombolnya sebelum
+                        melihat semua kenangan yang pernah kita buat😁😁</span>
+
+                    <button id="showCarouselBtn1">
+                        <span>Lanjut ? ?</span>
+                    </button>
+                </div>
+                <div class="content3">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-5">
+                                <img src="../image2/a.png" width="92%" alt="">
+                            </div>
+                            <div class="col-7">
+                                <p><b>Gimana . . . .</b> <br>Banyak kan 😬😬 Sebenarnya, masih banyak foto kebersamaan
+                                    kita, loh... Tapi di sini aku hanya menampilkan sebagian saja. Setiap foto punya
+                                    cerita dan momennya tersendiri.😚😚</p>
+                                <img src="../image2/s.png" width="70%" style="margin-left: 120px;" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card" style="padding-top: 10px;">
+                        <div class="row">
+                            <div class="col-5">
+                                <img src="../image2/as.png" width="140%" alt="">
+                            </div>
+                            <div class="col-7">
+                                <p style="font-size:small;background-color: skyblue; border-radius: 70%; text-align: center;">
+                                    <br> Bintang malam bersinar terang,<br>
+                                    Di tepi pantai duduk menepi. <br>
+                                    Selamat ulang tahun <b>Dea Rizky</b> sayang,<br>
+                                    Semoga cinta kita abadi sampai nanti. <br>
+                                    😚❤️❤️❤️
+                                </p>
+                                <p>Selamat ulang tahun! Di hari bahagiamu ini, aku ingin mengucapkan terima kasih karena telah menjadi sosok yang begitu berharga dalam hidupku.Tidak peduli apa yang terjadi, aku akan selalu ada untuk mendukungmu dan merayakan setiap pencapaianmu. Mari kita terus menciptakan kisah indah yang akan selalu kita kenang bersama.</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const showCarouselBtn = document.getElementById('showCarouselBtn');
+            const carouselContainer = document.querySelector('.content2');
+
+            showCarouselBtn.addEventListener('click', () => {
+                carouselContainer.style.display = 'block';
+                showCarouselBtn.style.display = 'none';
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const showCarouselBtn = document.getElementById('showCarouselBtn1');
+            const carouselContainer = document.querySelector('.content3');
+
+            showCarouselBtn.addEventListener('click', () => {
+                carouselContainer.style.display = 'block';
+                showCarouselBtn.style.display = 'none';
+            });
+        });
+    </script>
+
+</body>
+
+</html>
